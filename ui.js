@@ -1,4 +1,4 @@
-import { createGame } from "../game.js";
+import { createGame } from "./game.js";
 
 const boardElement = document.getElementById("board");
 const statusElement = document.getElementById("status");
