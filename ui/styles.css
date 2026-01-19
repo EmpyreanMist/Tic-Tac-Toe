@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  background: #f8fafc;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  font-size: 48px;
+  font-weight: 600;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.cell:hover {
+  background: #e2e8f0;
+}
+
+.cell.filled {
+  cursor: default;
+  animation: pop 0.15s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.status {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.restart {
+  margin-top: 16px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    opacity 0.1s ease;
+}
+
+.restart:hover {
+  opacity: 0.9;
+}
+
+.restart:active {
+  transform: scale(0.97);
+}
